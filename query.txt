@@ -1,0 +1,57 @@
+
+query{
+  users {
+    _id
+    email
+    userName
+  }
+}
+
+query{
+  todos {
+    _id
+    title
+    status
+  }
+}
+
+
+
+mutation {
+  register(user: { userName: "lolo", email: "lolo@gmail.com", password: "lolo123" }) {
+    _id
+    email
+    userName
+  }
+}
+
+
+
+mutation{
+  login (user:{email:"nnnn@gmail.com",password:"nnnn123"}){
+    token
+    refreshToken
+  }
+}
+
+
+mutation{
+  addTodo (todo:{title:"lAodlDl",status:"Todo",userId:"66cf65debfab02ffff3fc096"}){
+    _id
+    title
+    status
+  }
+}
+
+
+
+mutation{
+  deleteTodo(id:"66d0a89af95e4436bd36b3c7")
+}
+
+
+
+
+
+
+
